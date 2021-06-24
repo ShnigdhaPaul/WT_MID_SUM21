@@ -1,10 +1,57 @@
 <?php 
+$email="";
+	$err_email="";
+	$password="";
+	$err_password="";
+	if(empty($_POST["email"])){
+			$hasError = true;
+			$err_email="Email Required";
+		}
+		
+ else if(strpos($_POST["email"],"@.")){
+          $hasError=true;
+			     $err_email="Email must contain @ and .";
+		     }
+		
+		
+		else{
+			$email = $_POST["email"];
+		}
+		if(empty($_POST["password"])){
+			$hasError = true;
+			$err_password="Password Required";
+		}
+		
+		
+		else if(isset($_POST[""])){
+		       echo htmlspecialchars($_POST["pass"]);
+		    }
+			 else if(strlen($_POST["password"])<8){
+        $hasError=true;
+				 $err_password="Password Must Be 8 Charachter Long";
+		 }
+			 else if(!strpos($_POST["password"],"#")){
+         $hasError=true;
+			 $err_password="Password should contain special character";
+		    }
+		 else if(!strpos($_POST["password"],"5")){
+         $hasError=true;
+			    $err_password="Password should contain Numeric values";
+		   }
+		  
+		   else if(strpos($_POST["password"]," ")){
+          $hasError=true;
+			    $err_password="Password should not contain space";
+		    }
+			 else{
+				 $password=$_POST["password"];
+			 }
 ?> 
 
 <html>
 	<head></head>
 	<body>
-		<form>
+		<form action="" method="post">
 		
 		<fieldset>
 		
@@ -15,14 +62,14 @@
 			</tr>
 			
 			<tr>
-				
-					<td>Enter Your Email</td>
-					<td><input type="text" > </td>
-				
+					<td>Email</td>
+					<td>: <input type="text" name="email" value="<?php echo $email; ?>"placeholder="Insert Your Email">  </td>
+					<td><span> <?php echo $err_email;?> </span></td>
 				</tr>
 				<tr>
-					<td>Enter Your Password</td>
-					<td> <input type="password">  </td>
+					<td>Enter Password</td>
+					<td>: <input type="password" name="password" value="<?php echo $password; ?>" placeholder="Password">  </td>
+					<td><span> <?php echo $err_password;?> </span></td>
 				</tr>
 			<tr>
 					<td  rowspan="2" > <input type="reset" value="Reset">   <input type="submit" value="Submit Form"></td>
