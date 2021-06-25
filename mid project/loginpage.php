@@ -51,7 +51,7 @@ $email="";
 <html>
 	<head></head>
 	<body>
-		<form action="" method="post">
+		<form action="course.php" method="post">
 		
 		<fieldset>
 		
@@ -72,7 +72,7 @@ $email="";
 					<td><span> <?php echo $err_password;?> </span></td>
 				</tr>
 			<tr>
-					<td  rowspan="2" > <input type="reset" value="Reset">   <input type="submit" value="Submit Form"></td>
+					<a href = "" > <td  rowspan="2" > <input type="submit" value="Submit Form"> </a>  <input type="reset" value="Reset"> </td>
 					
 				</tr>
 			</table>

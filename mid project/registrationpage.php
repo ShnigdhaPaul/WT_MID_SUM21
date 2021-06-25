@@ -20,6 +20,7 @@ $confirmpassword="";
 	$err_state="";
 	$postal="";
 	$err_postal="";
+	$ShasError=false;
 	
 	if(isset($_POST["submit"])){
 		//name
@@ -160,7 +161,7 @@ if(empty($_POST["email"])){
 		
 		if(empty($_POST["postal"])){
 			$hasError = true;
-			$err_postal="Postal o zip Required";
+			$err_postal="Postal & zip Required";
 		}
 		
 		else{
@@ -187,7 +188,7 @@ if(empty($_POST["email"])){
 <html>
 	<head></head>
 	<body>
-		<form action="" method="post">
+		<form  method="post" action="">
 		<fieldset>
 			<table>
 			<td>  <center> <b> Registration Form  </td>
@@ -230,7 +231,7 @@ if(empty($_POST["email"])){
 				</tr>
 				
 				<tr>
-					<td colspan="2" align="right"><input type="submit" name="submit" value="register"><input type="reset" value="Reset"> </td>
+					<td colspan="2" align="right"> <input type="submit" name="submit" value="register"><input type="reset" value="Reset"> </td>
 					
 				</tr>
 				
