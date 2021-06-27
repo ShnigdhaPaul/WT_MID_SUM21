@@ -1,5 +1,6 @@
 <?php 
-$name="";
+	
+	$name="";
 	$err_name="";
 	$password="";
 	$err_password="";
@@ -22,7 +23,7 @@ $confirmpassword="";
 	$err_postal="";
 	$ShasError=false;
 	
-	if(isset($_POST["submit"])){
+if(isset($_POST["submit"])){
 		//name
 		if(empty($_POST["name"])){
 			$hasError = true;
@@ -167,8 +168,7 @@ if(empty($_POST["email"])){
 		else{
 			$postal = $_POST["postal"];
 		}
-		
-	if(!$hasError){
+		if(!$hasError){
 			echo "<h1>Form submitted</h1>";
 			echo $name."<br>";	
 			echo $password."<br>";
@@ -178,11 +178,13 @@ if(empty($_POST["email"])){
 			echo $state."<br>";
 			echo $postal."<br>";
 			echo $email."<br>";
-			echo $Code ."<br>";
+			echo $Code."<br>";
 			echo $number."<br>";
-			
+	header("Location: loginpage.php");
 	}
-	}
+}
+	
+
 ?> 
 
 <html>

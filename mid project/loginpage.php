@@ -3,6 +3,8 @@ $email="";
 	$err_email="";
 	$password="";
 	$err_password="";
+	$hasError=false;
+	
 	if(empty($_POST["email"])){
 			$hasError = true;
 			$err_email="Email Required";
@@ -46,12 +48,16 @@ $email="";
 			 else{
 				 $password=$_POST["password"];
 			 }
+			 if(!$hasError){
+				 header("Location: course.php");
+			 }
+	
 ?> 
 
 <html>
 	<head></head>
 	<body>
-		<form action="course.php" method="post">
+		<form action="" method="post">
 		
 		<fieldset>
 		
