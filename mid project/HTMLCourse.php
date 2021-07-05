@@ -28,8 +28,8 @@
 					  <li>Video: Using Secure File Transfer Protocol</li>
 					</ul>
 			   </ol>
-			  <li>Assessment </li>
-			  <li>Notes</li>
+			  <li><a href= "html quiz.php"> Assessment </li></a>
+			  <li><a href="Lecture_01.pptx">Notes</li></a>
 			  <li>Course Info</li>
 			</ul>
 			

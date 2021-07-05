@@ -1,18 +1,34 @@
 <?php 
+$name="";
+	$err_name="";
 $email="";
 	$err_email="";
 	$password="";
 	$err_password="";
 	$hasError=false;
-	
+	$users=array("paul@gmail.com"=>"Shnigdha#5", "rakib@gmail.com"=>"Rakib#5","nishat@gmail.com"=>"Nishat#5", "rinika@gmail.com"=>"Rinika#5");
+
+if($_SERVER["REQUEST_METHOD"]== "POST")
+{	
+if(empty($_POST["name"])){
+			$hasError = true;
+			$err_name="Name Required";
+		}
+		else if(strlen($_POST["name"]) <= 3){
+			$hasError = true;
+			$err_name="Name must contain >3 character";
+		}
+		else{
+			$name = $_POST["name"];
+		}
 if(empty($_POST["email"])){
 			$hasError = true;
 			$err_email="Email Required";
 		}
 		
- else if(!strpos($_POST["email"]," @gmail.com")){
+ else if(!strpos($_POST["email"],"@")){
           $hasError=true;
-			     $err_email="Email must contain @gmail.com ";
+			     $err_email="Email must contain @";
 		     }
 
 		
@@ -50,9 +66,17 @@ if(empty($_POST["email"])){
 				 $password=$_POST["password"];
 			 }
 			 if(!$hasError){
-				 header("Location: course.php");
+				 foreach($users as $e=>$p)
+				 {
+					 if($email== $e && $password== $p)
+					 {
+						 setcookie("loggeduser",$name,time()+120,"/");
+						  header("Location: course.php");
+					 }
+				 }
+				echo "invalid user";
 			 }
-	
+}
 ?> 
 
 <html>
@@ -67,6 +91,12 @@ if(empty($_POST["email"])){
 			<tr>
 			<td> <center> LogIn Form  </td>
 			</tr>
+			<tr>
+					<td>Enter Name</td>
+					<td>: <input type="text" name="name" value="<?php echo $name; ?>" placeholder="Your name ...."> </td>
+					<td><span> <?php echo $err_name;?> </span></td>
+				</tr>
+				
 			
 			<tr>
 					<td>Email</td>

@@ -17,5 +17,7 @@
     <h2><center>What's In The Future?</center></h2>
     <p>Our future learning models and personalized support system will enable an unimaginable degree of engagement with our students and instructors. And, we will be with them through every phase of their learning graph: from the time the social media team may reply a query on Facebook Page, to the fulfilling moment when the career-counselling team will get the email that a learner has found a job or started something new with the knowledge he gained here. Our priority is always the betterment of our students, and this flare will always inspire us to offer high-quality practical education to as many people as we can reach through internet. </p>
    
+   <h1>Contact</h1>
+   <p> Phone: 01625527729 <br> Email: learnpanda@gmail.com</p>
     </body>
 </html>

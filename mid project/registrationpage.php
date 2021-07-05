@@ -90,10 +90,11 @@ if(empty($_POST["email"])){
 			$err_email="Email Required";
 		}
 		
- else if(strpos($_POST["email"],"@.")){
+ else if(!strpos($_POST["email"],"@gmail.com")){
           $hasError=true;
-			     $err_email="Email must contain @ and .";
+			     $err_email="Email must contain @gmail.com ";
 		     }
+
 		
 		
 		else{
@@ -169,17 +170,8 @@ if(empty($_POST["email"])){
 			$postal = $_POST["postal"];
 		}
 		if(!$hasError){
-			echo "<h1>Form submitted</h1>";
-			echo $name."<br>";	
-			echo $password."<br>";
-			echo $confirmpassword."<br>";
-			echo $street."<br>";
-			echo $city."<br>";
-			echo $state."<br>";
-			echo $postal."<br>";
-			echo $email."<br>";
-			echo $Code."<br>";
-			echo $number."<br>";
+			
+			
 	header("Location: loginpage.php");
 	}
 }

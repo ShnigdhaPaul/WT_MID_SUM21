@@ -46,6 +46,8 @@ $q1="";
 				echo "$e<br>";
 			}
 			echo $q3."<br>";
+		
+		echo "Answers 1. body 2. td tr 3. none";
 		}
 
 ?>

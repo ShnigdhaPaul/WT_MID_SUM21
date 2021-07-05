@@ -14,7 +14,9 @@
 			<br><a href="agileCourse.php"><input type="button" value="Agile"></a>
 			<br><a href="IOTCourse.php"><input type="button" value="IOT"></a>
 			<br><a href="HTMLCourse.php"><input type="button" value="HTML"></a>
-			<br><a href="DataStructureCourse.php"><input type="button" value="Data structure"></a>
+			<br><a href="DataStructureCourse.php"><input type="button" value="Data structure"></a></br>
+			
+			<a href= "Computer Science Questions.php"> Assesment </a>
 			
 	
 		</fieldset>
