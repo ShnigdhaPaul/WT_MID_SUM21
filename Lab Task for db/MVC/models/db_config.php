@@ -6,7 +6,7 @@ $db_name="webtech_class_work";
 
 function excute($query)
 {
-	$query= "select * from user_info";
+	//$query= "select * from user_info";
 	//global $query;
 	global $db_server,$db_uname,$db_pass,$db_name;
 	$conn = mysqli_connect($db_server,$db_uname,$db_pass,$db_name);
